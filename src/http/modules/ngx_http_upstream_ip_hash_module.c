@@ -121,7 +121,7 @@ ngx_http_upstream_init_ip_hash_peer(ngx_http_request_t *r,
     case AF_INET:
         sin = (struct sockaddr_in *) r->connection->sockaddr;
         iphp->addr = (u_char *) &sin->sin_addr.s_addr;
-        iphp->addrlen = 3;
+        iphp->addrlen = 4;
         break;
 
 #if (NGX_HAVE_INET6)
